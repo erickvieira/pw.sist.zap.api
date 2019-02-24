@@ -1,0 +1,29 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "public",
+    "rewrites": [{
+      "source": "/status",
+      "function": "zapApi"
+    }, {
+      "source": "/login",
+      "function": "zapApi"
+    }, {
+      "source": "/all_users",
+      "function": "zapApi"
+    }, {
+      "source": "/prices",
+      "function": "zapApi"
+    }],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}
